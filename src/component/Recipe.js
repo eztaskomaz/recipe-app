@@ -1,5 +1,5 @@
 import React from "react";
-import style from './recipe.module.css';
+import style from './css/recipe.module.css';
 
 const Recipe = ({title, image, calories, ingredients}) => {
     return (
@@ -7,7 +7,7 @@ const Recipe = ({title, image, calories, ingredients}) => {
             <h1>{title}</h1>
             <ol>
                 {ingredients.map(ingredient => (
-                    <li key={ingredient.id}>{ingredient.text}</li>
+                    <li>{ingredient.text}</li>
                 ))}
             </ol>
             <p><i>Calories = {Math.round(calories)}</i></p>
